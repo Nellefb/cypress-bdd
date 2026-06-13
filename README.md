@@ -2,7 +2,7 @@
 
 Projeto de automação de testes desenvolvido com **Cypress**, utilizando **BDD (Behavior Driven Development)** com **Gherkin** e **Cucumber**, para validar os fluxos de **Login** e **Cadastro de Usuário** da aplicação Automation Practice.
 
-O projeto foi estruturado utilizando o padrão **Page Object Model (POM)**, promovendo melhor organização, reutilização de código e facilidade de manutenção. As validações dos cenários foram realizadas por meio de **Assertions do Cypress**.
+O projeto foi estruturado utilizando o padrão **Page Object Model (POM)**, promovendo melhor organização, reutilização de código e facilidade de manutenção. As validações dos cenários foram realizadas por meio de **Assertions do Cypress** e a biblioteca **Faker** foi utilizada para geração dinâmica de dados de teste nos cenários de cadastro.
 
 ## 🚀 Tecnologias Utilizadas
 
@@ -11,6 +11,7 @@ O projeto foi estruturado utilizando o padrão **Page Object Model (POM)**, prom
 * Node.js
 * Gherkin
 * Cucumber
+* Faker
 * Page Object Model (POM)
 
 ## 📂 Estrutura do Projeto
@@ -69,6 +70,12 @@ npm install @badeball/cypress-cucumber-preprocessor --save-dev
 
 ```bash
 npm install @bahmutov/cypress-esbuild-preprocessor esbuild --save-dev
+```
+
+### 6. Instale o Faker
+
+```bash
+npm install @faker-js/faker --save-dev
 ```
 
 ## ⚙️ Configuração do Cucumber
@@ -175,7 +182,25 @@ O campo senha deve ter pelo menos 6 dígitos
 
 #### Cadastro realizado com sucesso
 
-Valida o cadastro de um novo usuário utilizando dados válidos.
+Valida o cadastro de um novo usuário utilizando dados válidos gerados dinamicamente.
+
+## 🎲 Geração de Dados de Teste
+
+O projeto utiliza a biblioteca **Faker** para gerar dados dinâmicos durante a execução dos testes de cadastro.
+
+Exemplos de dados gerados:
+
+* Nome
+* E-mail
+* Informações únicas para cada execução
+
+Benefícios da utilização do Faker:
+
+* Evita dependência de dados fixos;
+* Reduz conflitos entre execuções;
+* Permite maior reutilização dos testes;
+* Aproxima os cenários de situações reais;
+* Facilita a criação de massa de testes.
 
 ## 🏗️ Boas Práticas Aplicadas
 
@@ -222,5 +247,15 @@ https://www.automationpratice.com.br/
 
 ## 🎯 Objetivo do Projeto
 
-Demonstrar a implementação de testes automatizados utilizando Cypress com BDD, aplicando boas práticas de automação como Page Object Model, Gherkin, Cucumber e Assertions para validação dos comportamentos da aplicação.
+Este é um projeto de aprendizado desenvolvido para praticar conceitos fundamentais de Automação de Testes, incluindo:
 
+* Cypress;
+* BDD com Gherkin e Cucumber;
+* Page Object Model (POM);
+* Assertions;
+* Geração de dados de teste com Faker;
+* Organização e manutenção de testes automatizados.
+
+## 👩‍💻 Autora
+
+Projeto desenvolvido para fins de estudo e prática em Automação de Testes com Cypress, Gherkin, Cucumber e Faker.
